@@ -1,0 +1,31 @@
+{
+  "name": "foundation-textmedia",
+  "description": "Text & Media for Foundation for Sites",
+  "keywords": [
+    "foundation",
+    "textmedia"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tan3/foundation-textmedia.git"
+  },
+  "authors": [
+    "Christopher Tan <christopher@tan3.de>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "demo",
+    "gulpfile.js",
+    "node_modules",
+    "package.json",
+    "sass/demo.sass",
+    "bower_components"
+  ],
+  "dependencies": {
+    "foundation-sites": "~6.2.3"
+  },
+  "devDependencies": {
+    "fancybox": "~2.1.5"
+  }
+}
