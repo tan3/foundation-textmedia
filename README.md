@@ -38,38 +38,32 @@ http://tan3.github.io/foundation-textmedia
 _Media position:_<br>
 The media item(s) can be placed at different positions around the text.
 
-* __Above__ [`media--above`] - See [demo#above-left](http://tan3.github.io/foundation-textmedia/#above-left)
-* __Below__ [`media--below`] - See [demo#below-left](http://tan3.github.io/foundation-textmedia/#below-left)
-* __Beside__ [`media--beside`] - See [demo#beside-left](http://tan3.github.io/foundation-textmedia/#beside-left)
-* __Inline__ [`media--inline`] - See [demo#inline-left](http://tan3.github.io/foundation-textmedia/#inline-left)
+* __Above__ [`media--above`]
+* __Below__ [`media--below`]
+* __Beside__ [`media--beside`]
+* __Inline__ [`media--inline`]
 
 
 _Media alignment:_<br>
 Additional to the position option you can align the media.
 
-* __Left__ (_Default_) - See [demo#above-left](http://tan3.github.io/foundation-textmedia/#above-left)
-* __Center__ [`media--center`] (_only for positions:_ Above, Below) - See [demo#above-center](http://tan3.github.io/foundation-textmedia/#above-center)
-* __Right__ [`media--right`] - See [demo#above-right](http://tan3.github.io/foundation-textmedia/#above-right)
+* __Left__ (_Default_)
+* __Center__ [`media--center`] (_only for positions:_ Above, Below)
+* __Right__ [`media--right`]
 
 
 _Media grid:_<br>
 Add multiple media columns to the textmedia element. Define the grid for the media items
 with the `data-media-columns` attribute on the `media__item` element.
 
-See [demo#multiple-columns](http://tan3.github.io/foundation-textmedia/#multiple-columns)
-
 _Media grid override:_<br>
 Override the grid for an media item with the `data-media-columns-override` attribute on
 the `media__column` element.
-
-See [demo#override](http://tan3.github.io/foundation-textmedia/#override)
 
 _Video:_<br>
 Embed a [Vimeo](https://vimeo.com) or [YouTube](https://youtube.com) video with the
 `media__video` element. Use the variant `media__video--widescreen` for a video with
 a widescreen format.
-
-See [demo#video](http://tan3.github.io/foundation-textmedia/#video)
 
 #### fancyBox license
 
