@@ -1,0 +1,1966 @@
+<!doctype html>
+<html class="no-js">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="fancybox/jquery.fancybox.css">
+    <link rel="stylesheet" href="css/demo.min.css">
+
+    <style>
+      a.is-active {
+        font-weight: 700;
+      }
+      li {
+        display: inline-block;
+      }
+      li:not(:last-child)::after {
+        content: " | "
+      }
+      pre {
+        margin: 1em 0;
+        border: 1px solid #cecece;
+        display:none;
+      }
+      hr:last-of-type {
+        margin-bottom: 5em;
+      }
+
+      .pre__modifier {
+        color: green;
+      }
+
+      [data-heading-above-text] {
+        display: none;
+      }
+
+      [data-media] {
+        display: none;
+      }
+
+      [data-media-position-above-left] {
+        display: block;
+      }
+    </style>
+
+    <title>foundation-textmedia - Demo</title>
+  </head>
+  <body>
+    <div class="row column">
+      <hr>
+      <h1>Text & Media <small>Foundation for Sites</small></h1>
+      <hr>
+      <h4>Media position</h4>
+      <ul>
+        <li><a href="#above-left" class="is-active" data-media-switcher>Above, left</a></li>
+        <li><a href="#above-center" data-media-switcher>Above, center</a></li>
+        <li><a href="#above-right" data-media-switcher>Above, right</a></li>
+        <li><a href="#below-left" data-media-switcher>Below, left</a></li>
+        <li><a href="#below-center" data-media-switcher>Below, center</a></li>
+        <li><a href="#below-right" data-media-switcher>Below, right</a></li>
+        <li><a href="#beside-left" data-media-switcher>Beside, left</a></li>
+        <li><a href="#beside-right" data-media-switcher>Beside, right</a></li>
+        <li><a href="#inline-left" data-media-switcher>Inline, left</a></li>
+        <li><a href="#inline-right" data-media-switcher>Inline, right</a></li>
+      </ul>
+      <h4>Media items</h4>
+      <ul>
+        <li><a href="#multiple-media" data-media-switcher>Multiple media items</a></li>
+        <li><a href="#multiple-columns" data-media-switcher>Multiple columns</a></li>
+        <li><a href="#override" data-media-switcher>Override (first)</a></li>
+        <li><a href="#override-last" data-media-switcher>Override (last)</a></li>
+        <li><a href="#media-caption" data-media-switcher>Media caption</a></li>
+        <li><a href="#media-border" data-media-switcher>Media border</a></li>
+        <li><a href="#video" data-media-switcher>Video items</a></li>
+        <li><a href="#fancybox" data-media-switcher>fancyBox</a></li>
+      </ul>
+      <h4>Heading position</h4>
+      <ul>
+        <li><a href="#above-media" class="is-active" data-heading-switcher>Above media</a></li>
+        <li><a href="#above-text" data-heading-switcher>Above text</a></li>
+      </ul>
+      <hr>
+    </div>
+
+    <!-- Above, left -->
+
+    <a name="above-left"></a>
+    <div class="row column" data-media data-media-position-above-left>
+      <h2 data-heading data-heading-above-media>Above, left <small>(Heading above media)</small></h2>
+      <div class="textmedia">
+        <div class="media media--above" data-media-columns="1">
+          <div class="media__row">
+            <div class="media__column">
+              <figure class="media__item">
+                <img src="images/dummy.png" title="Default Textmedia TITLE" alt="Default Textmedia ALT" />
+              </figure>
+            </div>
+          </div>
+        </div>
+        <div class="text">
+          <h2 data-heading data-heading-above-text>Above, left <small>(Heading above text)</small></h2>
+          <p>
+            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.
+            Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus
+            mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa
+            quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo,
+            rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium.
+            Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend
+            tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem
+            ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius
+            laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur
+            ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget
+            condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam
+            nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt
+            tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci
+            eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales
+            sagittis magna. Sed consequat, leo eget bibendum sodales, augue velit cursus nunc,
+          </p>
+        </div>
+      </div>
+
+      <hr>
+
+      <strong>CODE:</strong> (<a href="#" data-code-toggler>Show/Hide</a>)
+      <pre>
+&lt;div class="row column"&gt;
+  &lt;h2&gt;Above, left &lt;small&gt;(Heading above media)&lt;/small&gt;&lt;/h2&gt;
+  &lt;div class="textmedia"&gt;
+    &lt;div class="media <span class="pre__modifier">media--above</span>" data-media-columns="1"&gt;
+      &lt;div class="media__row"&gt;
+        &lt;div class="media__column"&gt;
+          &lt;figure class="media__item"&gt;
+            &lt;img src="images/dummy.png" title="Default Textmedia TITLE" alt="Default Textmedia ALT" /&gt;
+          &lt;/figure&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="text"&gt;
+      &lt;h2&gt;Above, left &lt;small&gt;(Heading above text)&lt;/small&gt;&lt;/h2&gt;
+      &lt;p&gt;
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.
+        Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus
+        mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa
+        quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo,
+        rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium.
+        Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend
+        tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem
+        ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius
+        laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur
+        ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget
+        condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam
+        nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt
+        tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci
+        eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales
+        sagittis magna. Sed consequat, leo eget bibendum sodales, augue velit cursus nunc,
+      &lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</pre>
+      <hr>
+    </div>
+
+    <!-- Above, center -->
+
+    <a name="above-center"></a>
+    <div class="row column" data-media data-media-position-above-center>
+      <h2 data-heading  data-heading-above-media>Above, center <small>(Heading above media)</small></h2>
+      <div class="textmedia">
+        <div class="media media--above media--center" data-media-columns="1">
+          <div class="media__row">
+            <div class="media__column">
+              <figure class="media__item">
+                <img src="images/dummy.png" title="Default Textmedia TITLE" alt="Default Textmedia ALT" />
+              </figure>
+            </div>
+          </div>
+        </div>
+        <div class="text">
+          <h2 data-heading data-heading-above-text>Above, center <small>(Heading above text)</small></h2>
+          <p>
+            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.
+            Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus
+            mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa
+            quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo,
+            rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium.
+            Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend
+            tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem
+            ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius
+            laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur
+            ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget
+            condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam
+            nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt
+            tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci
+            eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales
+            sagittis magna. Sed consequat, leo eget bibendum sodales, augue velit cursus nunc,
+          </p>
+        </div>
+      </div>
+
+      <hr>
+
+      <strong>CODE:</strong> (<a href="#" data-code-toggler>Show/Hide</a>)
+      <pre>
+&lt;div class="row column"&gt;
+  &lt;h2&gt;Above, center &lt;small&gt;(Heading above media)&lt;/small&gt;&lt;/h2&gt;
+  &lt;div class="textmedia"&gt;
+    &lt;div class="media <span class="pre__modifier">media--above</span> <span class="pre__modifier">media--center</span>" data-media-columns="1"&gt;
+      &lt;div class="media__row"&gt;
+        &lt;div class="media__column"&gt;
+          &lt;figure class="media__item"&gt;
+            &lt;img src="images/dummy.png" title="Default Textmedia TITLE" alt="Default Textmedia ALT" /&gt;
+          &lt;/figure&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="text"&gt;
+      &lt;h2&gt;Above, center &lt;small&gt;(Heading above text)&lt;/small&gt;&lt;/h2&gt;
+      &lt;p&gt;
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.
+        Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus
+        mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa
+        quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo,
+        rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium.
+        Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend
+        tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem
+        ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius
+        laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur
+        ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget
+        condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam
+        nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt
+        tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci
+        eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales
+        sagittis magna. Sed consequat, leo eget bibendum sodales, augue velit cursus nunc,
+      &lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</pre>
+      <hr>
+    </div>
+
+    <!-- Above, right -->
+
+    <a name="above-right"></a>
+    <div class="row column" data-media data-media-position-above-right>
+      <h2 data-heading data-heading-above-media>Above, right <small>(Heading above media)</small></h2>
+      <div class="textmedia">
+        <div class="media media--above media--right" data-media-columns="1">
+          <div class="media__row">
+            <div class="media__column">
+              <figure class="media__item">
+                <img src="images/dummy.png" title="Default Textmedia TITLE" alt="Default Textmedia ALT" />
+              </figure>
+            </div>
+          </div>
+        </div>
+        <div class="text">
+          <h2 data-heading data-heading-above-text>Above, right <small>(Heading above text)</small></h2>
+          <p>
+            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.
+            Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus
+            mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa
+            quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo,
+            rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium.
+            Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend
+            tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem
+            ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius
+            laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur
+            ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget
+            condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam
+            nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt
+            tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci
+            eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales
+            sagittis magna. Sed consequat, leo eget bibendum sodales, augue velit cursus nunc,
+          </p>
+        </div>
+      </div>
+
+      <hr>
+
+      <strong>CODE:</strong> (<a href="#" data-code-toggler>Show/Hide</a>)
+      <pre>
+&lt;div class="row column"&gt;
+  &lt;h2&gt;Above, right &lt;small&gt;(Heading above media)&lt;/small&gt;&lt;/h2&gt;
+  &lt;div class="textmedia"&gt;
+    &lt;div class="media <span class="pre__modifier">media--above</span> <span class="pre__modifier">media--right</span>" data-media-columns="1"&gt;
+      &lt;div class="media__row"&gt;
+        &lt;div class="media__column"&gt;
+          &lt;figure class="media__item"&gt;
+            &lt;img src="images/dummy.png" title="Default Textmedia TITLE" alt="Default Textmedia ALT" /&gt;
+          &lt;/figure&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="text"&gt;
+      &lt;h2&gt;Above, right &lt;small&gt;(Heading above text)&lt;/small&gt;&lt;/h2&gt;
+      &lt;p&gt;
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.
+        Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus
+        mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa
+        quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo,
+        rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium.
+        Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend
+        tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem
+        ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius
+        laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur
+        ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget
+        condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam
+        nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt
+        tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci
+        eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales
+        sagittis magna. Sed consequat, leo eget bibendum sodales, augue velit cursus nunc,
+      &lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</pre>
+      <hr>
+    </div>
+
+    <!-- Below, left -->
+
+    <a name="below-left"></a>
+    <div class="row column" data-media data-media-position-below-left>
+      <h2 data-heading data-heading-above-media>Below, left <small>(Heading above media)</small></h2>
+      <div class="textmedia">
+        <div class="text">
+          <h2 data-heading data-heading-above-text>Below, left <small>(Heading above text)</small></h2>
+          <p>
+            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.
+            Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus
+            mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa
+            quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo,
+            rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium.
+            Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend
+            tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem
+            ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius
+            laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur
+            ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget
+            condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam
+            nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt
+            tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci
+            eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales
+            sagittis magna. Sed consequat, leo eget bibendum sodales, augue velit cursus nunc,
+          </p>
+        </div>
+        <div class="media media--below" data-media-columns="1">
+          <div class="media__row">
+            <div class="media__column">
+              <figure class="media__item">
+                <img src="images/dummy.png" title="Default Textmedia TITLE" alt="Default Textmedia ALT" />
+              </figure>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <hr>
+
+      <strong>CODE:</strong> (<a href="#" data-code-toggler>Show/Hide</a>)
+      <pre>
+&lt;div class="row column"&gt;
+  &lt;h2&gt;Below, left &lt;small&gt;(Heading above media)&lt;/small&gt;&lt;/h2&gt;
+  &lt;div class="textmedia"&gt;
+    &lt;div class="text"&gt;
+      &lt;h2&gt;Below, left &lt;small&gt;(Heading above text)&lt;/small&gt;&lt;/h2&gt;
+      &lt;p&gt;
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.
+        Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus
+        mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa
+        quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo,
+        rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium.
+        Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend
+        tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem
+        ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius
+        laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur
+        ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget
+        condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam
+        nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt
+        tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci
+        eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales
+        sagittis magna. Sed consequat, leo eget bibendum sodales, augue velit cursus nunc,
+      &lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class="media <span class="pre__modifier">media--below</span>" data-media-columns="1"&gt;
+      &lt;div class="media__row"&gt;
+        &lt;div class="media__column"&gt;
+          &lt;figure class="media__item"&gt;
+            &lt;img src="images/dummy.png" title="Default Textmedia TITLE" alt="Default Textmedia ALT" /&gt;
+          &lt;/figure&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</pre>
+      <hr>
+    </div>
+
+    <!-- Below, center -->
+
+    <a name="below-center"></a>
+    <div class="row column" data-media data-media-position-below-center>
+      <h2 data-heading data-heading-above-media>Below, center <small>(Heading above media)</small></h2>
+      <div class="textmedia">
+        <div class="text">
+          <h2 data-heading data-heading-above-text>Below, center <small>(Heading above text)</small></h2>
+          <p>
+            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.
+            Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus
+            mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa
+            quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo,
+            rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium.
+            Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend
+            tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem
+            ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius
+            laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur
+            ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget
+            condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam
+            nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt
+            tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci
+            eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales
+            sagittis magna. Sed consequat, leo eget bibendum sodales, augue velit cursus nunc,
+          </p>
+        </div>
+        <div class="media media--below media--center" data-media-columns="1">
+          <div class="media__row">
+            <div class="media__column">
+              <figure class="media__item">
+                <img src="images/dummy.png" title="Default Textmedia TITLE" alt="Default Textmedia ALT" />
+              </figure>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <hr>
+
+      <strong>CODE:</strong> (<a href="#" data-code-toggler>Show/Hide</a>)
+      <pre>
+&lt;div class="row column"&gt;
+  &lt;h2&gt;Below, center &lt;small&gt;(Heading above media)&lt;/small&gt;&lt;/h2&gt;
+  &lt;div class="textmedia"&gt;
+    &lt;div class="text"&gt;
+      &lt;h2&gt;Below, center &lt;small&gt;(Heading above text)&lt;/small&gt;&lt;/h2&gt;
+      &lt;p&gt;
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.
+        Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus
+        mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa
+        quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo,
+        rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium.
+        Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend
+        tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem
+        ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius
+        laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur
+        ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget
+        condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam
+        nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt
+        tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci
+        eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales
+        sagittis magna. Sed consequat, leo eget bibendum sodales, augue velit cursus nunc,
+      &lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class="media <span class="pre__modifier">media--below</span> <span class="pre__modifier">media--center</span>" data-media-columns="1"&gt;
+      &lt;div class="media__row"&gt;
+        &lt;div class="media__column"&gt;
+          &lt;figure class="media__item"&gt;
+            &lt;img src="images/dummy.png" title="Default Textmedia TITLE" alt="Default Textmedia ALT" /&gt;
+          &lt;/figure&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</pre>
+      <hr>
+    </div>
+
+    <!-- Below, right -->
+
+    <a name="below-right"></a>
+    <div class="row column" data-media data-media-position-below-right>
+      <h2 data-heading data-heading-above-media>Below, right <small>(Heading above media)</small></h2>
+      <div class="textmedia">
+        <div class="text">
+          <h2 data-heading data-heading-above-text>Below, right <small>(Heading above text)</small></h2>
+          <p>
+            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.
+            Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus
+            mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa
+            quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo,
+            rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium.
+            Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend
+            tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem
+            ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius
+            laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur
+            ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget
+            condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam
+            nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt
+            tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci
+            eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales
+            sagittis magna. Sed consequat, leo eget bibendum sodales, augue velit cursus nunc,
+          </p>
+        </div>
+        <div class="media media--below media--right" data-media-columns="1">
+          <div class="media__row">
+            <div class="media__column">
+              <figure class="media__item">
+                <img src="images/dummy.png" title="Default Textmedia TITLE" alt="Default Textmedia ALT" />
+              </figure>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <hr>
+
+      <strong>CODE:</strong> (<a href="#" data-code-toggler>Show/Hide</a>)
+      <pre>
+&lt;div class="row column"&gt;
+  &lt;h2&gt;Below, right &lt;small&gt;(Heading above media)&lt;/small&gt;&lt;/h2&gt;
+  &lt;div class="textmedia"&gt;
+    &lt;div class="text"&gt;
+      &lt;h2&gt;Below, right &lt;small&gt;(Heading above text)&lt;/small&gt;&lt;/h2&gt;
+      &lt;p&gt;
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.
+        Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus
+        mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa
+        quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo,
+        rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium.
+        Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend
+        tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem
+        ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius
+        laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur
+        ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget
+        condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam
+        nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt
+        tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci
+        eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales
+        sagittis magna. Sed consequat, leo eget bibendum sodales, augue velit cursus nunc,
+      &lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class="media <span class="pre__modifier">media--below</span> <span class="pre__modifier">media--right</span>" data-media-columns="1"&gt;
+      &lt;div class="media__row"&gt;
+        &lt;div class="media__column"&gt;
+          &lt;figure class="media__item"&gt;
+            &lt;img src="images/dummy.png" title="Default Textmedia TITLE" alt="Default Textmedia ALT" /&gt;
+          &lt;/figure&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</pre>
+      <hr>
+    </div>
+
+    <!-- Beside, left -->
+
+    <a name="beside-left"></a>
+    <div class="row column" data-media data-media-position-beside-left>
+      <h2 data-heading data-heading-above-media>Beside, left <small>(Heading above media)</small></h2>
+      <div class="textmedia">
+        <div class="media media--beside" data-media-columns="1">
+          <div class="media__row">
+            <div class="media__column">
+              <figure class="media__item">
+                <img src="images/dummy.png" title="Default Textmedia TITLE" alt="Default Textmedia ALT" />
+              </figure>
+            </div>
+          </div>
+        </div>
+        <div class="text">
+          <h2 data-heading data-heading-above-text>Beside, left <small>(Heading above text)</small></h2>
+          <p>
+            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.
+            Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus
+            mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa
+            quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo,
+            rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium.
+            Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend
+            tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem
+            ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius
+            laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur
+            ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget
+            condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam
+            nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt
+            tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci
+            eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales
+            sagittis magna. Sed consequat, leo eget bibendum sodales, augue velit cursus nunc,
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.
+            Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus
+            mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa
+            quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo,
+            rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium.
+            Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend
+            tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem
+            ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius
+            laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur
+            ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget
+            condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam
+            nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt
+            tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci
+            eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales
+            sagittis magna. Sed consequat, leo eget bibendum sodales, augue velit cursus nunc,
+          </p>
+        </div>
+      </div>
+
+      <hr>
+
+      <strong>CODE:</strong> (<a href="#" data-code-toggler>Show/Hide</a>)
+      <pre>
+&lt;div class="row column"&gt;
+  &lt;h2&gt;Beside, left &lt;small&gt;(Heading above media)&lt;/small&gt;&lt;/h2&gt;
+  &lt;div class="textmedia"&gt;
+    &lt;div class="media <span class="pre__modifier">media--beside</span>" data-media-columns="1"&gt;
+      &lt;div class="media__row"&gt;
+        &lt;div class="media__column"&gt;
+          &lt;figure class="media__item"&gt;
+            &lt;img src="images/dummy.png" title="Default Textmedia TITLE" alt="Default Textmedia ALT" /&gt;
+          &lt;/figure&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="text"&gt;
+      &lt;h2&gt;Beside, left &lt;small&gt;(Heading above text)&lt;/small&gt;&lt;/h2&gt;
+      &lt;p&gt;
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.
+        Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus
+        mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa
+        quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo,
+        rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium.
+        Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend
+        tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem
+        ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius
+        laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur
+        ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget
+        condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam
+        nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt
+        tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci
+        eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales
+        sagittis magna. Sed consequat, leo eget bibendum sodales, augue velit cursus nunc,
+      &lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</pre>
+      <hr>
+    </div>
+
+    <!-- Beside, right -->
+
+    <a name="beside-right"></a>
+    <div class="row column" data-media data-media-position-beside-right>
+      <h2 data-heading data-heading-above-media>Beside, right <small>(Heading above media)</small></h2>
+      <div class="textmedia">
+        <div class="media media--beside media--right" data-media-columns="1">
+          <div class="media__row">
+            <div class="media__column">
+              <figure class="media__item">
+                <img src="images/dummy.png" title="Default Textmedia TITLE" alt="Default Textmedia ALT" />
+              </figure>
+            </div>
+          </div>
+        </div>
+        <div class="text">
+          <h2 data-heading data-heading-above-text>Beside, right <small>(Heading above text)</small></h2>
+          <p>
+            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.
+            Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus
+            mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa
+            quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo,
+            rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium.
+            Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend
+            tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem
+            ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius
+            laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur
+            ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget
+            condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam
+            nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt
+            tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci
+            eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales
+            sagittis magna. Sed consequat, leo eget bibendum sodales, augue velit cursus nunc,
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.
+            Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus
+            mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa
+            quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo,
+            rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium.
+            Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend
+            tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem
+            ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius
+            laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur
+            ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget
+            condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam
+            nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt
+            tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci
+            eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales
+            sagittis magna. Sed consequat, leo eget bibendum sodales, augue velit cursus nunc,
+          </p>
+        </div>
+      </div>
+
+      <hr>
+
+      <strong>CODE:</strong> (<a href="#" data-code-toggler>Show/Hide</a>)
+      <pre>
+&lt;div class="row column"&gt;
+  &lt;h2&gt;Beside, right &lt;small&gt;(Heading above media)&lt;/small&gt;&lt;/h2&gt;
+  &lt;div class="textmedia"&gt;
+    &lt;div class="media <span class="pre__modifier">media--beside</span> <span class="pre__modifier">media--right</span>" data-media-columns="1"&gt;
+      &lt;div class="media__row"&gt;
+        &lt;div class="media__column"&gt;
+          &lt;figure class="media__item"&gt;
+            &lt;img src="images/dummy.png" title="Default Textmedia TITLE" alt="Default Textmedia ALT" /&gt;
+          &lt;/figure&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="text"&gt;
+      &lt;h2&gt;Beside, right &lt;small&gt;(Heading above text)&lt;/small&gt;&lt;/h2&gt;
+      &lt;p&gt;
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.
+        Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus
+        mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa
+        quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo,
+        rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium.
+        Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend
+        tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem
+        ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius
+        laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur
+        ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget
+        condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam
+        nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt
+        tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci
+        eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales
+        sagittis magna. Sed consequat, leo eget bibendum sodales, augue velit cursus nunc,
+      &lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</pre>
+      <hr>
+    </div>
+
+    <!-- Inline, left -->
+
+    <a name="inline-left"></a>
+    <div class="row column" data-media data-media-position-inline-left>
+      <h2 data-heading data-heading-above-media>Inline, left <small>(Heading above media)</small></h2>
+      <div class="textmedia">
+        <div class="media media--inline" data-media-columns="1">
+          <div class="media__row">
+            <div class="media__column">
+              <figure class="media__item">
+                <img src="images/dummy.png" title="Default Textmedia TITLE" alt="Default Textmedia ALT" />
+              </figure>
+            </div>
+          </div>
+        </div>
+        <div class="text">
+          <h2 data-heading data-heading-above-text>Inline, left <small>(Heading above text)</small></h2>
+          <p>
+            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.
+            Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus
+            mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa
+            quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo,
+            rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium.
+            Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend
+            tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem
+            ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius
+            laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur
+            ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget
+            condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam
+            nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt
+            tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci
+            eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales
+            sagittis magna. Sed consequat, leo eget bibendum sodales, augue velit cursus nunc,
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.
+            Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus
+            mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa
+            quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo,
+            rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium.
+            Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend
+            tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem
+            ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius
+            laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur
+            ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget
+            condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam
+            nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt
+            tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci
+            eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales
+            sagittis magna. Sed consequat, leo eget bibendum sodales, augue velit cursus nunc,
+          </p>
+        </div>
+      </div>
+
+      <hr>
+
+      <strong>CODE:</strong> (<a href="#" data-code-toggler>Show/Hide</a>)
+      <pre>
+&lt;div class="row column"&gt;
+  &lt;h2&gt;Inline, left &lt;small&gt;(Heading above media)&lt;/small&gt;&lt;/h2&gt;
+  &lt;div class="textmedia"&gt;
+    &lt;div class="media <span class="pre__modifier">media--inline</span>" data-media-columns="1"&gt;
+      &lt;div class="media__row"&gt;
+        &lt;div class="media__column"&gt;
+          &lt;figure class="media__item"&gt;
+            &lt;img src="images/dummy.png" title="Default Textmedia TITLE" alt="Default Textmedia ALT" /&gt;
+          &lt;/figure&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="text"&gt;
+      &lt;h2&gt;Inline, left &lt;small&gt;(Heading above text)&lt;/small&gt;&lt;/h2&gt;
+      &lt;p&gt;
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.
+        Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus
+        mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa
+        quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo,
+        rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium.
+        Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend
+        tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem
+        ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius
+        laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur
+        ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget
+        condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam
+        nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt
+        tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci
+        eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales
+        sagittis magna. Sed consequat, leo eget bibendum sodales, augue velit cursus nunc,
+      &lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</pre>
+      <hr>
+    </div>
+
+    <!-- Inline, right -->
+
+    <a name="inline-right"></a>
+    <div class="row column" data-media data-media-position-inline-right>
+      <h2 data-heading data-heading-above-media>Inline, right <small>(Heading above media)</small></h2>
+      <div class="textmedia">
+        <div class="media media--inline media--right" data-media-columns="1">
+          <div class="media__row">
+            <div class="media__column">
+              <figure class="media__item">
+                <img src="images/dummy.png" title="Default Textmedia TITLE" alt="Default Textmedia ALT" />
+              </figure>
+            </div>
+          </div>
+        </div>
+        <div class="text">
+          <h2 data-heading data-heading-above-text>Inline, right <small>(Heading above text)</small></h2>
+          <p>
+            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.
+            Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus
+            mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa
+            quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo,
+            rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium.
+            Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend
+            tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem
+            ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius
+            laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur
+            ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget
+            condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam
+            nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt
+            tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci
+            eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales
+            sagittis magna. Sed consequat, leo eget bibendum sodales, augue velit cursus nunc,
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.
+            Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus
+            mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa
+            quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo,
+            rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium.
+            Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend
+            tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem
+            ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius
+            laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur
+            ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget
+            condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam
+            nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt
+            tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci
+            eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales
+            sagittis magna. Sed consequat, leo eget bibendum sodales, augue velit cursus nunc,
+          </p>
+        </div>
+      </div>
+
+      <hr>
+
+      <strong>CODE:</strong> (<a href="#" data-code-toggler>Show/Hide</a>)
+      <pre>
+&lt;div class="row column"&gt;
+  &lt;h2&gt;Inline, right &lt;small&gt;(Heading above media)&lt;/small&gt;&lt;/h2&gt;
+  &lt;div class="textmedia"&gt;
+    &lt;div class="media <span class="pre__modifier">media--inline</span> <span class="pre__modifier">media--right</span>" data-media-columns="1"&gt;
+      &lt;div class="media__row"&gt;
+        &lt;div class="media__column"&gt;
+          &lt;figure class="media__item"&gt;
+            &lt;img src="images/dummy.png" title="Default Textmedia TITLE" alt="Default Textmedia ALT" /&gt;
+          &lt;/figure&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="text"&gt;
+      &lt;h2&gt;Inline, right &lt;small&gt;(Heading above text)&lt;/small&gt;&lt;/h2&gt;
+      &lt;p&gt;
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.
+        Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus
+        mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa
+        quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo,
+        rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium.
+        Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend
+        tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem
+        ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius
+        laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur
+        ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget
+        condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam
+        nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt
+        tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci
+        eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales
+        sagittis magna. Sed consequat, leo eget bibendum sodales, augue velit cursus nunc,
+      &lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</pre>
+      <hr>
+    </div>
+
+    <!-- Multiple media items - Beside, left -->
+
+    <a name="multiple-media"></a>
+    <div class="row column" data-media data-media-multiple-media>
+      <h2 data-heading data-heading-above-media>Multiple media items <small>(Heading above media)</small></h2>
+      <div class="textmedia">
+        <div class="media media--beside" data-media-columns="1">
+          <div class="media__row">
+            <div class="media__column">
+              <figure class="media__item">
+                <img src="images/dummy.png" title="Default Textmedia TITLE" alt="Default Textmedia ALT" />
+              </figure>
+            </div>
+            <div class="media__column">
+              <figure class="media__item">
+                <img src="images/dummy.png" title="Default Textmedia TITLE" alt="Default Textmedia ALT" />
+              </figure>
+            </div>
+          </div>
+        </div>
+        <div class="text">
+          <h2 data-heading data-heading-above-text>Multiple media items <small>(Heading above text)</small></h2>
+          <p>
+            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.
+            Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus
+            mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa
+            quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo,
+            rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium.
+            Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend
+            tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem
+            ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius
+            laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur
+            ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget
+            condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam
+            nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt
+            tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci
+            eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales
+            sagittis magna. Sed consequat, leo eget bibendum sodales, augue velit cursus nunc,
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.
+            Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus
+            mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa
+            quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo,
+            rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium.
+            Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend
+            tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem
+            ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius
+            laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur
+            ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget
+            condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam
+            nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt
+            tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci
+            eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales
+            sagittis magna. Sed consequat, leo eget bibendum sodales, augue velit cursus nunc,
+          </p>
+        </div>
+      </div>
+
+      <hr>
+
+      <strong>CODE:</strong> (<a href="#" data-code-toggler>Show/Hide</a>)
+      <pre>
+&lt;div class="row column"&gt;
+  &lt;h2&gt;Multiple media items &lt;small&gt;(Heading above media)&lt;/small&gt;&lt;/h2&gt;
+  &lt;div class="textmedia"&gt;
+    &lt;div class="media media--beside" data-media-columns="1"&gt;
+      &lt;div class="media__row"&gt;
+        &lt;div class="media__column"&gt;
+          &lt;figure class="media__item"&gt;
+            &lt;img src="images/dummy.png" title="Default Textmedia TITLE" alt="Default Textmedia ALT" /&gt;
+          &lt;/figure&gt;
+        &lt;/div&gt;
+        <span class="pre__modifier">&lt;div class="media__column"&gt;
+          &lt;figure class="media__item"&gt;
+            &lt;img src="images/dummy.png" title="Default Textmedia TITLE" alt="Default Textmedia ALT" /&gt;
+          &lt;/figure&gt;
+        &lt;/div&gt;</span>
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="text"&gt;
+      &lt;h2&gt;Multiple media items &lt;small&gt;(Heading above text)&lt;/small&gt;&lt;/h2&gt;
+      &lt;p&gt;
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.
+        Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus
+        mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa
+        quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo,
+        rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium.
+        Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend
+        tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem
+        ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius
+        laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur
+        ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget
+        condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam
+        nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt
+        tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci
+        eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales
+        sagittis magna. Sed consequat, leo eget bibendum sodales, augue velit cursus nunc,
+      &lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</pre>
+      <hr>
+    </div>
+
+    <!-- Multiple media, multiple columns - Beside, left -->
+
+    <a name="multiple-columns"></a>
+    <div class="row column" data-media data-media-multiple-columns>
+      <h2 data-heading data-heading-above-media>Multiple columns <small>(Heading above media)</small></h2>
+      <div class="textmedia">
+        <div class="media media--beside" data-media-columns="2">
+          <div class="media__row">
+            <div class="media__column">
+              <figure class="media__item">
+                <img src="images/dummy.png" title="Default Textmedia TITLE" alt="Default Textmedia ALT" />
+              </figure>
+            </div>
+            <div class="media__column">
+              <figure class="media__item">
+                <img src="images/dummy.png" title="Default Textmedia TITLE" alt="Default Textmedia ALT" />
+              </figure>
+            </div>
+            <div class="media__column">
+              <figure class="media__item">
+                <img src="images/dummy.png" title="Default Textmedia TITLE" alt="Default Textmedia ALT" />
+              </figure>
+            </div>
+            <div class="media__column">
+              <figure class="media__item">
+                <img src="images/dummy.png" title="Default Textmedia TITLE" alt="Default Textmedia ALT" />
+              </figure>
+            </div>
+          </div>
+        </div>
+        <div class="text">
+          <h2 data-heading data-heading-above-text>Multiple columns <small>(Heading above text)</small></h2>
+          <p>
+            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.
+            Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus
+            mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa
+            quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo,
+            rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium.
+            Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend
+            tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem
+            ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius
+            laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur
+            ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget
+            condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam
+            nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt
+            tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci
+            eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales
+            sagittis magna. Sed consequat, leo eget bibendum sodales, augue velit cursus nunc,
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.
+            Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus
+            mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa
+            quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo,
+            rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium.
+            Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend
+            tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem
+            ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius
+            laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur
+            ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget
+            condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam
+            nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt
+            tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci
+            eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales
+            sagittis magna. Sed consequat, leo eget bibendum sodales, augue velit cursus nunc,
+          </p>
+        </div>
+      </div>
+
+      <hr>
+
+      <strong>CODE:</strong> (<a href="#" data-code-toggler>Show/Hide</a>)
+      <pre>
+&lt;div class="row column"&gt;
+  &lt;h2&gt;Multiple columns &lt;small&gt;(Heading above media)&lt;/small&gt;&lt;/h2&gt;
+  &lt;div class="textmedia"&gt;
+    &lt;div class="media media--beside" <span class="pre__modifier">data-media-columns="2"</span>&gt;
+      &lt;div class="media__row"&gt;
+        &lt;div class="media__column"&gt;
+          &lt;figure class="media__item"&gt;
+            &lt;img src="images/dummy.png" title="Default Textmedia TITLE" alt="Default Textmedia ALT" /&gt;
+          &lt;/figure&gt;
+        &lt;/div&gt;
+        &lt;div class="media__column"&gt;
+          &lt;figure class="media__item"&gt;
+            &lt;img src="images/dummy.png" title="Default Textmedia TITLE" alt="Default Textmedia ALT" /&gt;
+          &lt;/figure&gt;
+        &lt;/div&gt;
+        &lt;div class="media__column"&gt;
+          &lt;figure class="media__item"&gt;
+            &lt;img src="images/dummy.png" title="Default Textmedia TITLE" alt="Default Textmedia ALT" /&gt;
+          &lt;/figure&gt;
+        &lt;/div&gt;
+        &lt;div class="media__column"&gt;
+          &lt;figure class="media__item"&gt;
+            &lt;img src="images/dummy.png" title="Default Textmedia TITLE" alt="Default Textmedia ALT" /&gt;
+          &lt;/figure&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="text"&gt;
+      &lt;h2&gt;Multiple columns &lt;small&gt;(Heading above text)&lt;/small&gt;&lt;/h2&gt;
+      &lt;p&gt;
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.
+        Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus
+        mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa
+        quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo,
+        rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium.
+        Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend
+        tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem
+        ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius
+        laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur
+        ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget
+        condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam
+        nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt
+        tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci
+        eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales
+        sagittis magna. Sed consequat, leo eget bibendum sodales, augue velit cursus nunc,
+      &lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</pre>
+      <hr>
+    </div>
+
+    <!-- Multiple media, multiple columns, override - Beside, left -->
+
+    <a name="override"></a>
+    <div class="row column" data-media data-media-override>
+      <h2 data-heading data-heading-above-media>Override (first) <small>(Heading above media)</small></h2>
+      <div class="textmedia">
+        <div class="media media--beside" data-media-columns="2">
+          <div class="media__row">
+            <div class="media__column" data-media-columns-override="1">
+              <figure class="media__item">
+                <img src="images/dummy.png" title="Default Textmedia TITLE" alt="Default Textmedia ALT" />
+              </figure>
+            </div>
+            <div class="media__column">
+              <figure class="media__item">
+                <img src="images/dummy.png" title="Default Textmedia TITLE" alt="Default Textmedia ALT" />
+              </figure>
+            </div>
+            <div class="media__column">
+              <figure class="media__item">
+                <img src="images/dummy.png" title="Default Textmedia TITLE" alt="Default Textmedia ALT" />
+              </figure>
+            </div>
+          </div>
+        </div>
+        <div class="text">
+          <h2 data-heading data-heading-above-text>Override (first) <small>(Heading above text)</small></h2>
+          <p>
+            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.
+            Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus
+            mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa
+            quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo,
+            rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium.
+            Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend
+            tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem
+            ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius
+            laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur
+            ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget
+            condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam
+            nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt
+            tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci
+            eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales
+            sagittis magna. Sed consequat, leo eget bibendum sodales, augue velit cursus nunc,
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.
+            Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus
+            mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa
+            quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo,
+            rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium.
+            Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend
+            tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem
+            ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius
+            laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur
+            ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget
+            condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam
+            nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt
+            tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci
+            eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales
+            sagittis magna. Sed consequat, leo eget bibendum sodales, augue velit cursus nunc,
+          </p>
+        </div>
+      </div>
+
+      <hr>
+
+      <strong>CODE:</strong> (<a href="#" data-code-toggler>Show/Hide</a>)
+      <pre>
+&lt;div class="row column"&gt;
+  &lt;h2&gt;Override (first) &lt;small&gt;(Heading above media)&lt;/small&gt;&lt;/h2&gt;
+  &lt;div class="textmedia"&gt;
+    &lt;div class="media media--beside" data-media-columns="2"&gt;
+      &lt;div class="media__row"&gt;
+        &lt;div class="media__column" <span class="pre__modifier">data-media-columns-override="1"</span>&gt;
+          &lt;figure class="media__item"&gt;
+            &lt;img src="images/dummy.png" title="Default Textmedia TITLE" alt="Default Textmedia ALT" /&gt;
+          &lt;/figure&gt;
+        &lt;/div&gt;
+        &lt;div class="media__column"&gt;
+          &lt;figure class="media__item"&gt;
+            &lt;img src="images/dummy.png" title="Default Textmedia TITLE" alt="Default Textmedia ALT" /&gt;
+          &lt;/figure&gt;
+        &lt;/div&gt;
+        &lt;div class="media__column"&gt;
+          &lt;figure class="media__item"&gt;
+            &lt;img src="images/dummy.png" title="Default Textmedia TITLE" alt="Default Textmedia ALT" /&gt;
+          &lt;/figure&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="text"&gt;
+      &lt;h2&gt;Override (first) &lt;small&gt;(Heading above text)&lt;/small&gt;&lt;/h2&gt;
+      &lt;p&gt;
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.
+        Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus
+        mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa
+        quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo,
+        rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium.
+        Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend
+        tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem
+        ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius
+        laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur
+        ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget
+        condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam
+        nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt
+        tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci
+        eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales
+        sagittis magna. Sed consequat, leo eget bibendum sodales, augue velit cursus nunc,
+      &lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</pre>
+      <hr>
+    </div>
+
+    <!-- Multiple media, multiple columns, override (last) - Beside, left -->
+
+    <a name="override-last"></a>
+    <div class="row column" data-media data-media-override-last>
+      <h2 data-heading data-heading-above-media>Override (last) <small>(Heading above media)</small></h2>
+      <div class="textmedia">
+        <div class="media media--beside" data-media-columns="2">
+          <div class="media__row">
+            <div class="media__column">
+              <figure class="media__item">
+                <img src="images/dummy.png" title="Default Textmedia TITLE" alt="Default Textmedia ALT" />
+              </figure>
+            </div>
+            <div class="media__column">
+              <figure class="media__item">
+                <img src="images/dummy.png" title="Default Textmedia TITLE" alt="Default Textmedia ALT" />
+              </figure>
+            </div>
+            <div class="media__column" data-media-columns-override="1">
+              <figure class="media__item">
+                <img src="images/dummy.png" title="Default Textmedia TITLE" alt="Default Textmedia ALT" />
+              </figure>
+            </div>
+          </div>
+        </div>
+        <div class="text">
+          <h2 data-heading data-heading-above-text>Override (last) <small>(Heading above text)</small></h2>
+          <p>
+            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.
+            Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus
+            mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa
+            quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo,
+            rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium.
+            Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend
+            tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem
+            ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius
+            laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur
+            ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget
+            condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam
+            nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt
+            tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci
+            eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales
+            sagittis magna. Sed consequat, leo eget bibendum sodales, augue velit cursus nunc,
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.
+            Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus
+            mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa
+            quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo,
+            rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium.
+            Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend
+            tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem
+            ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius
+            laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur
+            ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget
+            condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam
+            nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt
+            tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci
+            eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales
+            sagittis magna. Sed consequat, leo eget bibendum sodales, augue velit cursus nunc,
+          </p>
+        </div>
+      </div>
+
+      <hr>
+
+      <strong>CODE:</strong> (<a href="#" data-code-toggler>Show/Hide</a>)
+      <pre>
+&lt;div class="row column"&gt;
+  &lt;h2&gt;Override (last) &lt;small&gt;(Heading above media)&lt;/small&gt;&lt;/h2&gt;
+  &lt;div class="textmedia"&gt;
+    &lt;div class="media media--beside" data-media-columns="2"&gt;
+      &lt;div class="media__row"&gt;
+        &lt;div class="media__column"&gt;
+          &lt;figure class="media__item"&gt;
+            &lt;img src="images/dummy.png" title="Default Textmedia TITLE" alt="Default Textmedia ALT" /&gt;
+          &lt;/figure&gt;
+        &lt;/div&gt;
+        &lt;div class="media__column"&gt;
+          &lt;figure class="media__item"&gt;
+            &lt;img src="images/dummy.png" title="Default Textmedia TITLE" alt="Default Textmedia ALT" /&gt;
+          &lt;/figure&gt;
+        &lt;/div&gt;
+        &lt;div class="media__column" <span class="pre__modifier">data-media-columns-override="1"</span>&gt;
+          &lt;figure class="media__item"&gt;
+            &lt;img src="images/dummy.png" title="Default Textmedia TITLE" alt="Default Textmedia ALT" /&gt;
+          &lt;/figure&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="text"&gt;
+      &lt;h2&gt;Override (last) &lt;small&gt;(Heading above text)&lt;/small&gt;&lt;/h2&gt;
+      &lt;p&gt;
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.
+        Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus
+        mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa
+        quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo,
+        rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium.
+        Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend
+        tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem
+        ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius
+        laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur
+        ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget
+        condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam
+        nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt
+        tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci
+        eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales
+        sagittis magna. Sed consequat, leo eget bibendum sodales, augue velit cursus nunc,
+      &lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</pre>
+      <hr>
+    </div>
+
+    <!-- Media caption - beside, left -->
+
+    <a name="media-caption"></a>
+    <div class="row column" data-media data-media-caption>
+      <h2 data-heading data-heading-above-media>Media caption <small>(Heading above media)</small></h2>
+      <div class="textmedia">
+        <div class="media media--beside" data-media-columns="1">
+          <div class="media__row">
+            <div class="media__column">
+              <figure class="media__item">
+                <img src="images/dummy.png" title="Default Textmedia TITLE" alt="Default Textmedia ALT" />
+                <figcaption class="media__caption">This is the media caption for media 1</figcaption>
+              </figure>
+            </div>
+            <div class="media__column">
+              <figure class="media__item">
+                <img src="images/dummy.png" title="Default Textmedia TITLE" alt="Default Textmedia ALT" />
+                <figcaption class="media__caption">This is the media caption for media 2</figcaption>
+              </figure>
+            </div>
+          </div>
+        </div>
+        <div class="text">
+          <h2 data-heading data-heading-above-text>Media caption <small>(Heading above text)</small></h2>
+          <p>
+            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.
+            Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus
+            mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa
+            quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo,
+            rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium.
+            Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend
+            tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem
+            ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius
+            laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur
+            ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget
+            condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam
+            nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt
+            tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci
+            eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales
+            sagittis magna. Sed consequat, leo eget bibendum sodales, augue velit cursus nunc,
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.
+            Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus
+            mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa
+            quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo,
+            rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium.
+            Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend
+            tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem
+            ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius
+            laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur
+            ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget
+            condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam
+            nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt
+            tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci
+            eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales
+            sagittis magna. Sed consequat, leo eget bibendum sodales, augue velit cursus nunc,
+          </p>
+        </div>
+      </div>
+
+      <hr>
+
+      <strong>CODE:</strong> (<a href="#" data-code-toggler>Show/Hide</a>)
+      <pre>
+&lt;div class="row column"&gt;
+  &lt;h2&gt;Media caption &lt;small&gt;(Heading above media)&lt;/small&gt;&lt;/h2&gt;
+  &lt;div class="textmedia"&gt;
+    &lt;div class="media media--beside" data-media-columns="1"&gt;
+      &lt;div class="media__row"&gt;
+        &lt;div class="media__column"&gt;
+          &lt;figure class="media__item"&gt;
+            &lt;img src="images/dummy.png" title="Default Textmedia TITLE" alt="Default Textmedia ALT" /&gt;
+            <span class="pre__modifier">&lt;figcaption class="media__caption"&gt;This is the media caption for media 1&lt;/figcaption&gt;</span>
+          &lt;/figure&gt;
+        &lt;/div&gt;
+        &lt;div class="media__column"&gt;
+          &lt;figure class="media__item"&gt;
+            &lt;img src="images/dummy.png" title="Default Textmedia TITLE" alt="Default Textmedia ALT" /&gt;
+            <span class="pre__modifier">&lt;figcaption class="media__caption"&gt;This is the media caption for media 2&lt;/figcaption&gt;</span>
+          &lt;/figure&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="text"&gt;
+      &lt;h2&gt;Media caption &lt;small&gt;(Heading above text)&lt;/small&gt;&lt;/h2&gt;
+      &lt;p&gt;
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.
+        Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus
+        mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa
+        quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo,
+        rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium.
+        Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend
+        tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem
+        ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius
+        laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur
+        ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget
+        condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam
+        nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt
+        tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci
+        eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales
+        sagittis magna. Sed consequat, leo eget bibendum sodales, augue velit cursus nunc,
+      &lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</pre>
+      <hr>
+    </div>
+
+    <!-- Media border - Beside, left -->
+
+    <a name="media-border"></a>
+    <div class="row column" data-media data-media-border>
+      <h2 data-heading data-heading-above-media>Media border <small>(Heading above media)</small></h2>
+      <div class="textmedia">
+        <div class="media media--beside" data-media-columns="1">
+          <div class="media__row">
+            <div class="media__column">
+              <figure class="media__item media__item--border">
+                <img src="images/dummy.png" title="Default Textmedia TITLE" alt="Default Textmedia ALT" />
+                <figcaption class="media__caption">This is the media caption inside the media border</figcaption>
+              </figure>
+            </div>
+            <div class="media__column">
+              <figure class="media__item media__item--border">
+                <img src="images/dummy.png" title="Default Textmedia TITLE" alt="Default Textmedia ALT" />
+              </figure>
+              <figcaption class="media__caption">This is the media caption outside the media border</figcaption>
+            </div>
+          </div>
+        </div>
+        <div class="text">
+          <h2 data-heading data-heading-above-text>Media border <small>(Heading above text)</small></h2>
+          <p>
+            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.
+            Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus
+            mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa
+            quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo,
+            rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium.
+            Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend
+            tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem
+            ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius
+            laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur
+            ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget
+            condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam
+            nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt
+            tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci
+            eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales
+            sagittis magna. Sed consequat, leo eget bibendum sodales, augue velit cursus nunc,
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.
+            Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus
+            mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa
+            quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo,
+            rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium.
+            Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend
+            tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem
+            ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius
+            laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur
+            ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget
+            condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam
+            nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt
+            tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci
+            eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales
+            sagittis magna. Sed consequat, leo eget bibendum sodales, augue velit cursus nunc,
+          </p>
+        </div>
+      </div>
+
+      <hr>
+
+      <strong>CODE:</strong> (<a href="#" data-code-toggler>Show/Hide</a>)
+      <pre>
+&lt;div class="row column"&gt;
+  &lt;h2&gt;Media border &lt;small&gt;(Heading above media)&lt;/small&gt;&lt;/h2&gt;
+  &lt;div class="textmedia"&gt;
+    &lt;div class="media media--beside" data-media-columns="1"&gt;
+      &lt;div class="media__row"&gt;
+        &lt;div class="media__column"&gt;
+          &lt;figure class="media__item <span class="pre__modifier">media__item--border</span>"&gt;
+            &lt;img src="images/dummy.png" title="Default Textmedia TITLE" alt="Default Textmedia ALT" /&gt;
+            &lt;figcaption class="media__caption"&gt;This is the media caption inside the media border&lt;/figcaption&gt;
+          &lt;/figure&gt;
+        &lt;/div&gt;
+        &lt;div class="media__column"&gt;
+          &lt;figure class="media__item <span class="pre__modifier">media__item--border</span>"&gt;
+            &lt;img src="images/dummy.png" title="Default Textmedia TITLE" alt="Default Textmedia ALT" /&gt;
+          &lt;/figure&gt;
+          &lt;figcaption class="media__caption"&gt;This is the media caption outside the media border&lt;/figcaption&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="text"&gt;
+      &lt;h2&gt;Media border &lt;small&gt;(Heading above text)&lt;/small&gt;&lt;/h2&gt;
+      &lt;p&gt;
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.
+        Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus
+        mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa
+        quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo,
+        rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium.
+        Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend
+        tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem
+        ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius
+        laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur
+        ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget
+        condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam
+        nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt
+        tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci
+        eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales
+        sagittis magna. Sed consequat, leo eget bibendum sodales, augue velit cursus nunc,
+      &lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</pre>
+      <hr>
+    </div>
+
+    <!-- Video items - beside, left -->
+
+    <a name="video"></a>
+    <div class="row column" data-media data-media-video>
+      <h2 data-heading data-heading-above-media>Video items <small>(Heading above media)</small></h2>
+      <div class="textmedia">
+        <div class="media media--beside" data-media-columns="2">
+          <div class="media__row">
+            <div class="media__column" data-media-columns-override="1">
+              <figure class="media__item">
+                <div class="media__video media__video--widescreen">
+                  <iframe src="//player.vimeo.com/video/46926279" title="Dummy video" width="640" height="360" frameborder="0" allowfullscreen=""></iframe>
+                </div>
+                <figcaption class="media__caption">This is an inline vimeo video (Widescreen)</figcaption>
+              </figure>
+            </div>
+            <div class="media__column">
+              <figure class="media__item">
+                <div class="media__video">
+                  <iframe src="//player.vimeo.com/video/46926279" title="Dummy video" width="640" height="360" frameborder="0" allowfullscreen=""></iframe>
+                </div>
+                <figcaption class="media__caption">This is an inline vimeo video</figcaption>
+              </figure>
+            </div>
+            <div class="media__column">
+              <figure class="media__item">
+                <div class="media__video">
+                  <iframe src="//www.youtube.com/embed/XQu8TTBmGhA" title="The video placeholder" width="420" height="315" frameborder="0" allowfullscreen=""></iframe>
+                </div>
+                <figcaption class="media__caption">This is an inline YouTube video</figcaption>
+              </figure>
+            </div>
+          </div>
+        </div>
+        <div class="text">
+          <h2 data-heading data-heading-above-text>Video items <small>(Heading above text)</small></h2>
+          <p>
+            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.
+            Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus
+            mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa
+            quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo,
+            rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium.
+            Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend
+            tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem
+            ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius
+            laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur
+            ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget
+            condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam
+            nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt
+            tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci
+            eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales
+            sagittis magna. Sed consequat, leo eget bibendum sodales, augue velit cursus nunc,
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.
+            Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus
+            mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa
+            quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo,
+            rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium.
+            Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend
+            tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem
+            ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius
+            laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur
+            ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget
+            condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam
+            nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt
+            tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci
+            eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales
+            sagittis magna. Sed consequat, leo eget bibendum sodales, augue velit cursus nunc,
+          </p>
+        </div>
+      </div>
+
+      <hr>
+
+      <strong>CODE:</strong> (<a href="#" data-code-toggler>Show/Hide</a>)
+      <pre>
+&lt;div class="row column"&gt;
+  &lt;h2&gt;Video items &lt;small&gt;(Heading above media)&lt;/small&gt;&lt;/h2&gt;
+  &lt;div class="textmedia"&gt;
+    &lt;div class="media media--beside" data-media-columns="1"&gt;
+      &lt;div class="media__row"&gt;
+        &lt;div class="media__column"&gt;
+          &lt;figure class="media__item"&gt;
+            <span class="pre__modifier">&lt;div class="media__video media__video--widescreen"&gt;
+              &lt;iframe src="//player.vimeo.com/video/46926279" title="Dummy video" width="640" height="360" frameborder="0" allowfullscreen=""&gt;&lt;/iframe&gt;
+            &lt;/div&gt;</span>
+            &lt;figcaption class="media__caption"&gt;This is an inline vimeo video (Widescreen)&lt;/figcaption&gt;
+          &lt;/figure&gt;
+        &lt;/div&gt;
+        &lt;div class="media__column"&gt;
+          &lt;figure class="media__item"&gt;
+            <span class="pre__modifier">&lt;div class="media__video"&gt;
+              &lt;iframe src="//player.vimeo.com/video/46926279" title="Dummy video" width="640" height="360" frameborder="0" allowfullscreen=""&gt;&lt;/iframe&gt;
+            &lt;/div&gt;</span>
+          &lt;/figure&gt;
+          &lt;figcaption class="media__caption"&gt;This is an inline vimeo video&lt;/figcaption&gt;
+        &lt;/div&gt;
+        &lt;div class="media__column"&gt;
+          &lt;figure class="media__item"&gt;
+            <span class="pre__modifier">&lt;div class="media__video"&gt;
+              &lt;iframe src="//www.youtube.com/embed/XQu8TTBmGhA" title="The video placeholder" width="420" height="315" frameborder="0" allowfullscreen=""&gt;&lt;/iframe&gt;
+            &lt;/div&gt;</span>
+          &lt;/figure&gt;
+          &lt;figcaption class="media__caption"&gt;This is an inline YouTube video&lt;/figcaption&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="text"&gt;
+      &lt;h2&gt;Video items &lt;small&gt;(Heading above text)&lt;/small&gt;&lt;/h2&gt;
+      &lt;p&gt;
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.
+        Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus
+        mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa
+        quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo,
+        rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium.
+        Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend
+        tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem
+        ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius
+        laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur
+        ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget
+        condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam
+        nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt
+        tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci
+        eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales
+        sagittis magna. Sed consequat, leo eget bibendum sodales, augue velit cursus nunc,
+      &lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</pre>
+      <hr>
+    </div>
+
+    <!-- fancyBox - beside, left -->
+
+    <a name="fancybox"></a>
+    <div class="row column" data-media data-media-fancybox>
+      <h2 data-heading data-heading-above-media>fancyBox <small>(Heading above media)</small></h2>
+      <div class="textmedia">
+        <div class="media media--beside" data-media-columns="1">
+          <div class="media__row">
+            <div class="media__column">
+              <figure class="media__item">
+                <a href="images/dummy.png" class="media__link" rel="lightbox[gallery_1]" data-fancybox data-fancybox-type="image">
+                  <img src="images/dummy.png" title="Default Textmedia TITLE" alt="Default Textmedia ALT" />
+                </a>
+                <figcaption class="media__caption">Click to enlarge</figcaption>
+              </figure>
+            </div>
+            <div class="media__column">
+              <figure class="media__item">
+                <a href="//www.youtube.com/embed/XQu8TTBmGhA" class="media__link" rel="lightbox[gallery_1]" data-fancybox data-fancybox-type="iframe">
+                  <button class="media__button">Play</button>
+                  <img src="images/dummy-video-placeholder.png" title="Dummy video poster TITLE" alt="Dummy video poster ALT" />
+                </a>
+                <figcaption class="media__caption">Click to enlarge YouTube video</figcaption>
+              </figure>
+            </div>
+            <div class="media__column">
+              <figure class="media__item">
+                <a href="//player.vimeo.com/video/46926279" class="media__link" rel="lightbox[gallery_1]" data-fancybox data-fancybox-type="iframe">
+                  <button class="media__button">Play</button>
+                  <img src="images/dummy-video.png" title="Dummy video poster TITLE" alt="Dummy video poster ALT" />
+                </a>
+                <figcaption class="media__caption">Click to enlarge vimeo video</figcaption>
+              </figure>
+            </div>
+          </div>
+        </div>
+        <div class="text">
+          <h2 data-heading data-heading-above-text>fancyBox <small>(Heading above text)</small></h2>
+          <p>
+            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.
+            Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus
+            mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa
+            quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo,
+            rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium.
+            Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend
+            tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem
+            ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius
+            laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur
+            ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget
+            condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam
+            nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt
+            tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci
+            eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales
+            sagittis magna. Sed consequat, leo eget bibendum sodales, augue velit cursus nunc,
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.
+            Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus
+            mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa
+            quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo,
+            rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium.
+            Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend
+            tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem
+            ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius
+            laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur
+            ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget
+            condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam
+            nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt
+            tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci
+            eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales
+            sagittis magna. Sed consequat, leo eget bibendum sodales, augue velit cursus nunc,
+          </p>
+        </div>
+      </div>
+
+      <hr>
+
+      <strong>CODE:</strong> (<a href="#" data-code-toggler>Show/Hide</a>)
+      <pre>
+&lt;div class="row column"&gt;
+  &lt;h2&gt;fancyBox &lt;small&gt;(Heading above media)&lt;/small&gt;&lt;/h2&gt;
+  &lt;div class="textmedia"&gt;
+    &lt;div class="media media--beside" data-media-columns="1"&gt;
+      &lt;div class="media__row"&gt;
+        &lt;div class="media__column"&gt;
+          &lt;figure class="media__item"&gt;
+            <span class="pre__modifier">&lt;a href="images/dummy.png" class="media__link" rel="lightbox[gallery_1]" data-fancybox data-fancybox-type="image"&gt;
+              &lt;img src="images/dummy.png" title="Default Textmedia TITLE" alt="Default Textmedia ALT" /&gt;
+            &lt;/a&gt;</span>
+            &lt;figcaption class="media__caption"&gt;Click to enlarge&lt;/figcaption&gt;
+          &lt;/figure&gt;
+        &lt;/div&gt;
+        &lt;div class="media__column"&gt;
+          &lt;figure class="media__item"&gt;
+            <span class="pre__modifier">&lt;a href="//www.youtube.com/embed/XQu8TTBmGhA" class="media__link" rel="lightbox[gallery_1]" data-fancybox data-fancybox-type="iframe"&gt;
+              &lt;button class="media__button"&gt;Play&lt;/button&gt;
+              &lt;img src="images/dummy-video-placeholder.png" title="Dummy video poster TITLE" alt="Dummy video poster ALT" /&gt;
+            &lt;/a&gt;</span>
+            &lt;figcaption class="media__caption"&gt;Click to enlarge YouTube video&lt;/figcaption&gt;
+          &lt;/figure&gt;
+        &lt;/div&gt;
+        &lt;div class="media__column"&gt;
+          &lt;figure class="media__item"&gt;
+            <span class="pre__modifier">&lt;a href="//player.vimeo.com/video/46926279" class="media__link" rel="lightbox[gallery_1]" data-fancybox data-fancybox-type="iframe"&gt;
+              &lt;button class="media__button"&gt;Play&lt;/button&gt;
+              &lt;img src="images/dummy-video.png" title="Dummy video poster TITLE" alt="Dummy video poster ALT" /&gt;
+            &lt;/a&gt;</span>
+            &lt;figcaption class="media__caption"&gt;Click to enlarge vimeo video&lt;/figcaption&gt;
+          &lt;/figure&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="text"&gt;
+      &lt;h2&gt;fancyBox &lt;small&gt;(Heading above text)&lt;/small&gt;&lt;/h2&gt;
+      &lt;p&gt;
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.
+        Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus
+        mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa
+        quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo,
+        rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium.
+        Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend
+        tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem
+        ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius
+        laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur
+        ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget
+        condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam
+        nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt
+        tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci
+        eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales
+        sagittis magna. Sed consequat, leo eget bibendum sodales, augue velit cursus nunc,
+      &lt;/p&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</pre>
+      <hr>
+    </div>
+
+    <script src="js/jquery.min.js"></script>
+    <script src="fancybox/jquery.fancybox.js"></script>
+    <script src="fancybox/jquery.fancybox-media.js"></script>
+    <script>
+      $(function() {
+        $('[data-fancybox]').fancybox({
+          helpers: {
+            overlay: {
+              locked: false
+            },
+            media: true
+          }
+        });
+
+        var $mediaSwitcher = $('[data-media-switcher]');
+        var $media = {
+          'all': $('[data-media]'),
+          '#above-left': $('[data-media-position-above-left]'),
+          '#above-center': $('[data-media-position-above-center]'),
+          '#above-right': $('[data-media-position-above-right]'),
+          '#below-left': $('[data-media-position-below-left]'),
+          '#below-center': $('[data-media-position-below-center]'),
+          '#below-right': $('[data-media-position-below-right]'),
+          '#beside-left': $('[data-media-position-beside-left]'),
+          '#beside-right': $('[data-media-position-beside-right]'),
+          '#inline-left': $('[data-media-position-inline-left]'),
+          '#inline-right': $('[data-media-position-inline-right]'),
+          '#multiple-media': $('[data-media-multiple-media]'),
+          '#multiple-columns': $('[data-media-multiple-columns]'),
+          '#override': $('[data-media-override]'),
+          '#override-last': $('[data-media-override-last]'),
+          '#media-caption': $('[data-media-caption]'),
+          '#media-border': $('[data-media-border]'),
+          '#video': $('[data-media-video]'),
+          '#fancybox': $('[data-media-fancybox]'),
+        };
+
+        var hash = window.location.hash;
+        if (hash) {
+          $mediaSwitcher.removeClass('is-active');
+          $mediaSwitcher.each(function() {
+            if ($(this).attr('href') == hash) {
+              $(this).addClass('is-active');
+            }
+          });
+
+          $media['all'].hide();
+          $media[hash].show();
+        }
+
+        $mediaSwitcher.on('click', function(event) {
+          event.preventDefault();
+
+          $mediaSwitcher.removeClass('is-active');
+          $(this).addClass('is-active');
+
+          $media['all'].hide();
+          $media[$(this).attr('href')].show();
+        });
+
+        var $headingSwitcher = $('[data-heading-switcher]');
+        var $headings = {
+          'all': $('[data-heading]'),
+          '#above-media': $('[data-heading-above-media]'),
+          '#above-text': $('[data-heading-above-text]')
+        };
+
+        $headingSwitcher.on('click', function(event) {
+          event.preventDefault();
+
+          $headingSwitcher.removeClass('is-active');
+          $(this).addClass('is-active');
+
+          $headings['all'].hide();
+          $headings[$(this).attr('href')].show();
+        });
+
+        var $codeToggler = $('[data-code-toggler]');
+        $codeToggler.on('click', function(event) {
+          event.preventDefault();
+          $(this).next('pre').toggle();
+        });
+      });
+    </script>
+  </body>
+</html>
