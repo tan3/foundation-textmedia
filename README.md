@@ -35,32 +35,32 @@ http://tan3.github.io/foundation-textmedia
 
 #### Options
 
-_Media position:_<br>
+__Media position:__<br>
 The media item(s) can be placed at different positions around the text.
 
-* __Above__ [`media--above`]
-* __Below__ [`media--below`]
-* __Beside__ [`media--beside`]
-* __Inline__ [`media--inline`]
+* Above [`media--above`]
+* Below [`media--below`]
+* Beside [`media--beside`]
+* Inline [`media--inline`]
 
 
-_Media alignment:_<br>
+__Media alignment:__<br>
 Additional to the position option you can align the media.
 
-* __Left__ (_Default_)
-* __Center__ [`media--center`] (_only for positions:_ Above, Below)
-* __Right__ [`media--right`]
+* Left (_Default_)
+* Center [`media--center`] (_only for positions:_ Above, Below)
+* Right [`media--right`]
 
 
-_Media grid:_<br>
-Add multiple media columns to the textmedia element. Define the grid for the media items
+__Media columns:__<br>
+Add multiple media columns to the textmedia element. Define the columns for the media items
 with the `data-media-columns` attribute on the `media__item` element.
 
-_Media grid override:_<br>
-Override the grid for an media item with the `data-media-columns-override` attribute on
+__Media columns override:__<br>
+Override the columns for an media item with the `data-media-columns-override` attribute on
 the `media__column` element.
 
-_Video:_<br>
+__Video:__<br>
 Embed a [Vimeo](https://vimeo.com) or [YouTube](https://youtube.com) video with the
 `media__video` element. Use the variant `media__video--widescreen` for a video with
 a widescreen format.
