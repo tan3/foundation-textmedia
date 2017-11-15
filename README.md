@@ -12,7 +12,7 @@ bower install foundation-textmedia
 
 ## Usage
 
-Import [foundation-textmedia.sass](sass/foundation-textmedia.sass) to your [Sass](http://sass-lang.com) preprocessing chain after the import of [Foundation for Sites](http://foundation.zurb.com/sites/docs/).
+Import [foundation-textmedia.sass](sass/foundation-textmedia.sass) to your [Sass](http://sass-lang.com) preprocessing chain after the import of [Foundation for Sites Version 6.4.x](http://foundation.zurb.com/sites/docs/).
 
 Example from [`demo.sass`](sass/demo.sass):
 

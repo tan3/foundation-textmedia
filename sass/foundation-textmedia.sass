@@ -1,6 +1,7 @@
 // ----------
 // Text & Media - Settings
 
+$global-flexbox: false
 // Bottom margin of the textmedia element
 $textmedia-margin-bottom: $global-margin !default
 
@@ -37,7 +38,7 @@ $textmedia-media-button-height: 50px !default
 // Text & Media
 
 .textmedia
-  @extend .media-object
+  @include media-object-container
 
   margin-bottom: $textmedia-margin-bottom
 
@@ -45,7 +46,7 @@ $textmedia-media-button-height: 50px !default
     @extend .row::after
 
   .text
-    @extend .media-object-section
+    @include media-object-section($textmedia-media-padding)
     display: block
     clear: both
 
@@ -53,7 +54,7 @@ $textmedia-media-button-height: 50px !default
       padding-right: 0
 
   .media
-    @extend .media-object-section
+    @include media-object-section($textmedia-media-padding)
     display: block
     width: auto
     max-width: 100%
@@ -135,6 +136,10 @@ $textmedia-media-button-height: 50px !default
       @extend .text-left
       font-size: $textmedia-caption-font-size
       margin-top: $textmedia-caption-margin-top
+      &-align-center
+        text-align: center
+      &-align-right
+        text-align: right
 
     &__link
       position: relative
@@ -192,4 +197,3 @@ $textmedia-media-button-height: 50px !default
       @include breakpoint(medium only)
         @if $columns > $textmedia-max-media-columns-for-medium
           width: 100%/$textmedia-max-media-columns-for-medium !important
-
