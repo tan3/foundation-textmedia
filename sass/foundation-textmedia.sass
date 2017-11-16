@@ -43,7 +43,9 @@ $textmedia-media-button-height: 50px !default
   margin-bottom: $textmedia-margin-bottom
 
   &::after
-    @extend .row::after
+    clear: both
+    content: ' '
+    display: table
 
   .text
     @include media-object-section($textmedia-media-padding)
