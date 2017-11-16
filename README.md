@@ -41,7 +41,7 @@ The media item(s) can be placed at different positions around the text.
 * Above [`media--above`]
 * Below [`media--below`]
 * Beside [`media--beside`]
-* Inline [`media--inline`]
+* Intext [`media--intext`]
 
 
 __Media alignment:__<br>

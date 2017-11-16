@@ -94,7 +94,7 @@ $textmedia-media-button-height: 50px !default
         + .text
           display: table-cell
 
-    &--inline
+    &--intext
       @include breakpoint(medium)
         float: left !important
         max-width: $textmedia-max-width-inline
@@ -128,7 +128,9 @@ $textmedia-media-button-height: 50px !default
 
       &--border
         @if $textmedia-default-media-border == 1
-          @extend .thumbnail
+          img
+            @extend .thumbnail
+            margin-bottom: 0
 
         display: block
         line-height: inherit
@@ -162,11 +164,11 @@ $textmedia-media-button-height: 50px !default
         border-radius: 50%
 
     &__video
-      @extend .flex-video
+      @include responsive-embed(map-get($responsive-embed-ratios, default))
       margin-bottom: 0
 
       &--widescreen
-        @extend .widescreen
+        @include responsive-embed(map-get($responsive-embed-ratios, widescreen))
 
 
   @for $columns from 1 through $textmedia-max-media-columns
